@@ -49,8 +49,8 @@ $route['login'] = 'login';
 $route['logout'] = 'logout';
 
 // base routes
-$route['(:any)'] = 'pages/view/$1';
-$route['default_controller'] = 'pages/view';
+$route['(:any)'] = 'posts';
+$route['default_controller'] = 'posts';
 
 
 /* End of file routes.php */
