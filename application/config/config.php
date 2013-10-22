@@ -238,6 +238,28 @@ $config['hash'] = 'sha512';
 
 /*
 |--------------------------------------------------------------------------
+| Administrator User Name
+|--------------------------------------------------------------------------
+|
+| The User Name for this website's administrator.
+|
+*/
+$config['administratorUserName'] = 'admin';
+
+/*
+|--------------------------------------------------------------------------
+| User Login Details
+|--------------------------------------------------------------------------
+|
+| The indexes that will be used to store user login information in cookies.
+|
+*/
+$config['username'] = 'username';
+$config['loginTime'] = 'loginTime';
+
+
+/*
+|--------------------------------------------------------------------------
 | Session Variables
 |--------------------------------------------------------------------------
 |

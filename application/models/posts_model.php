@@ -30,6 +30,14 @@ class Posts_model extends CI_Model {
 
 		return $this->db->insert('posts', $data);
 	}
+	
+	public function censor_post($slug)
+	{
+		if(Admin_Validator_Helper::isAdmin())
+		{
+			return $this->db->update('posts', array('censored' => 1), array('slug' => $slug));
+		}
+	}
 }
 
 ?>

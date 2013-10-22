@@ -5,6 +5,7 @@ class Posts extends MY_Controller {
 	{
 		parent::__construct();
 		$this->load->model('posts_model');
+		$this->load->helper('admin_validator');
 	}
 
 	public function index()
@@ -67,6 +68,22 @@ class Posts extends MY_Controller {
 		}
 	}
 	
+	public function censor($slug)
+	{
+		$data['post_item'] = $this->posts_model->get_post($slug);
+		if (empty($data['post_item']))
+		{
+			show_404();
+		}
+		else
+		{
+			if(Admin_Validator_Helper::isAdmin())
+			{
+				$this->posts_model->censor_post($slug);
+				redirect(site_url('posts'));
+			}
+		}
+	}
 	
 }
 

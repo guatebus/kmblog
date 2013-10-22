@@ -17,6 +17,10 @@
 				<ul role="navigation">
 					<li><a href="<?php echo $base_url.$index_page?>/posts">List Blog Posts</a></li>
 					<li><a href="<?php echo $base_url.$index_page?>/posts/create">Create Blog Post</a></li>
+					<li><a href="<?php echo $base_url.$index_page?>/login">Login</a></li>
+					<?php if($this->session->userdata($this->config->item('username'))): ?>
+						<li><a href="<?php echo site_url('logout')?>">Logout</a></li>
+					<?php endif; ?>
 				</ul>
 			</nav>
 		</div>
