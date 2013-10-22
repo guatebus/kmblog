@@ -29,8 +29,8 @@ class Login extends MY_Controller {
 			if ( $this->form_validation->run() ) 
 			{
 				$userInfo = array(
-					$this->config->item('username')	=> $this->input->post('user_name'),
-					$this->config->item('loginTime') => date("F j, Y, G:i"));
+					$this->config->item('my_sess_user_name')	=> $this->input->post('user_name'),
+					$this->config->item('my_sess_login_time')	=> date("F j, Y, G:i"));
 				$this->session->set_userdata($userInfo);
 				$this->session->set_flashdata('message', 'User logged in correctly');
 				redirect(site_url('posts'));

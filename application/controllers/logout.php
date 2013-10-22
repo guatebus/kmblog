@@ -9,8 +9,8 @@ class Logout extends MY_Controller {
 	public function index()
 	{
 		$userInfo = array(
-			$this->config->item('username')	=> $this->session->userdata($this->config->item('username')),
-			$this->config->item('loginTime') => $this->session->userdata($this->config->item('loginTime')));
+			$this->config->item('my_sess_user_name')	=> $this->session->userdata($this->config->item('my_sess_user_name')),
+			$this->config->item('my_sess_login_time') => $this->session->userdata($this->config->item('my_sess_login_time')));
 		$this->session->unset_userdata($userInfo);
 		redirect(site_url('posts'));
 	}

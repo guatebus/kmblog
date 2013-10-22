@@ -6,7 +6,7 @@
 
 class KM_User_Agent_Helper {
 
-	public static function getUserAgentInfo()
+	public static function get_user_agent_info()
 	{
 		$CI =& get_instance();
 		$CI->load->library('user_agent');

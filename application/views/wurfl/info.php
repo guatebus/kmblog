@@ -2,7 +2,7 @@
 	<h2>WURFL XML Info</h2>
 	<div class="content-main">
 		<ul>
-			<li>WURFL Version: <?php //echo $wurflInfo->version ?></li>
+			<li>WURFL Version: <?php echo $wurflInfo->version ?></li>
 		</ul>
 		<div>User Agent: <?php echo $ua ?></div>
 		<div>

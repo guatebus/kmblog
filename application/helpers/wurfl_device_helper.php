@@ -6,33 +6,53 @@
 
 class WURFL_Device_Helper {
 
-	public static function getUserAgentInfo()
+	const TABLET = "Tablet";
+	const MOBILE_PHONE = "Mobile Phone";
+	const MOBILE_DEVICE = "Mobile Device";
+	
+	const SMART_TV = "Smart TV";
+	const DESKTOP_OR_LAPTOP = "Desktop or Laptop";
+	
+	public static function is_handheld($requestingDevice)
 	{
-		$CI =& get_instance();
-		$CI->load->library('user_agent');
-		
-		if ($CI->agent->is_browser())
-		{
-			$agent = $CI->agent->browser().' '.$CI->agent->version();
-		}
-		elseif ($CI->agent->is_robot())
-		{
-			$agent = $CI->agent->robot();
-		}
-		elseif ($CI->agent->is_mobile())
-		{
-			$agent = $CI->agent->mobile();
-		}
-		else
-		{
-			$agent = 'Unidentified User Agent';
-		}
+		return $requestingDevice->getCapability('is_wireless_device') == 'true'; // according to WURFL docs, both laptop and desktop return false to this.
+	}
 
-		$info['agentInfo'] = $agent;
-		$info['agentPlatform'] = $CI->agent->platform();
-		$info['agentString'] = $CI->agent->agent_string();
+	public static function identify_device($requestingDevice)
+	{
+		$is_wireless = static::is_handheld($requestingDevice);
+		$is_smarttv = ($requestingDevice->getCapability('is_smarttv') == 'true');
+		$is_tablet = ($requestingDevice->getCapability('is_tablet') == 'true');
+		$is_phone = ($requestingDevice->getCapability('can_assign_phone_number') == 'true');
 		
-		return $info;
+		if ($is_wireless) 
+		{
+			if ($is_tablet) 
+			{
+				$device = static::TABLET;
+			} 
+			else if ($is_phone) 
+			{
+				$device = static::MOBILE_PHONE;
+			} 
+			else 
+			{
+				$device = static::MOBILE_DEVICE;
+			}
+		} 
+		else 
+		{
+			if ($is_smarttv) 
+			{
+				$device = static::SMART_TV;
+			} 
+			else 
+			{
+				$device = static::DESKTOP_OR_LAPTOP;
+			}
+		}
+		
+		return $device;
 	}
 
 }

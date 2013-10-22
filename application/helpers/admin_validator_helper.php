@@ -10,7 +10,7 @@ class Admin_Validator_Helper {
 	{
 		$CI =& get_instance();
 		$CI->load->library('session');
-		return $CI->session->userdata($CI->config->item('username')) === $CI->config->item('administratorUserName');
+		return $CI->session->userdata($CI->config->item('my_sess_user_name')) === $CI->config->item('site_administrator_user_name');
 	}
 
 }

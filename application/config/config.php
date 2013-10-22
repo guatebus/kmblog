@@ -244,19 +244,7 @@ $config['hash'] = 'sha512';
 | The User Name for this website's administrator.
 |
 */
-$config['administratorUserName'] = 'admin';
-
-/*
-|--------------------------------------------------------------------------
-| User Login Details
-|--------------------------------------------------------------------------
-|
-| The indexes that will be used to store user login information in cookies.
-|
-*/
-$config['username'] = 'username';
-$config['loginTime'] = 'loginTime';
-
+$config['site_administrator_user_name'] = 'admin';
 
 /*
 |--------------------------------------------------------------------------
@@ -285,6 +273,32 @@ $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update']	= 300;
+
+
+/*
+|--------------------------------------------------------------------------
+| Custom Session Variables
+|--------------------------------------------------------------------------
+|
+| 'my_sess_device' 		= Index used to store (in session cookies) the user agent's device.
+| 'my_sess_is_handheld' = Index used to store (in session cookies) whether the sesion's user agent is handheld or not.
+|
+*/
+$config['my_sess_device'] = 'device';
+$config['my_sess_is_handheld'] = 'is_handheld';
+
+/*
+|--------------------------------------------------------------------------
+| User Login Details
+|--------------------------------------------------------------------------
+|
+| The indexes that will be used to store user login information in cookies.
+|
+*/
+$config['my_sess_user_name'] = 'user_name';
+$config['my_sess_login_time'] = 'login_time';
+
+
 
 /*
 |--------------------------------------------------------------------------
