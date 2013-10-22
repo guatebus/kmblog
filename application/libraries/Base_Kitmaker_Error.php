@@ -2,9 +2,9 @@
 
 class Base_Kitmaker_Error {
 
-	var $type;
-	var $code;
-	var $message;
+	public $type;
+	public $code;
+	public $message;
 
 	public function __construct()
 	{

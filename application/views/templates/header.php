@@ -21,6 +21,7 @@
 					<?php if($this->session->userdata($this->config->item('username'))): ?>
 						<li><a href="<?php echo site_url('logout')?>">Logout</a></li>
 					<?php endif; ?>
+					<li><a href="<?php echo site_url('wurfl')?>">WURFL</a></li>
 				</ul>
 			</nav>
 		</div>

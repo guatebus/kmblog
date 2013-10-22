@@ -38,6 +38,9 @@
 |
 */
 
+// WURFL route
+$route['wurfl'] = 'wurflinfo';
+
 // posts routes
 $route['posts/create'] = 'posts/create';
 $route['posts/censor/(:any)'] = 'posts/censor/$1';
