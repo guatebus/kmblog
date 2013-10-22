@@ -1,0 +1,1 @@
+<section id="content_main">This is home.php by gus</section>

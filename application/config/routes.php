@@ -38,8 +38,19 @@
 |
 */
 
-$route['default_controller'] = "welcome";
-$route['404_override'] = '';
+// posts routes
+$route['posts/create'] = 'posts/create';
+$route['posts/censor/(:any)'] = 'posts/censor/$1';
+$route['posts/(:any)'] = 'posts/view/$1';
+$route['posts'] = 'posts';
+
+// login routes
+$route['login'] = 'login';
+$route['logout'] = 'logout';
+
+// base routes
+$route['(:any)'] = 'pages/view/$1';
+$route['default_controller'] = 'pages/view';
 
 
 /* End of file routes.php */
