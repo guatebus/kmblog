@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title><?php echo $title ?> - Quick Blog Web App by Alejandro Bustamante</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $base_url.$cssLocation?>style.css" media="screen, handheld" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $base_url.$cssLocation?>enhanced.css" media="screen  and (min-width: 40.5em)" />
+</head>
+<body>
+	<header role="banner">
+		<div>
+			<h1 class="logo"><a href="<?php echo $base_url.$index_page?>/posts">KMBlog</a></h1>
+			 <ul  id="nav-anchors" class="nav-anchors">
+            	<li><a href="#nav" id="menu-anchor">Menu</a></li>
+            </ul>
+			<nav id="nav" class="nav reveal">
+				<ul role="navigation">
+					<li><a href="<?php echo $base_url.$index_page?>/posts">List Blog Posts</a></li>
+					<li><a href="<?php echo $base_url.$index_page?>/posts/create">Create Blog Post</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header><!--end .header-->
+	<?php $info = KM_User_Agent_Helper::getUserAgentInfo(); ?>
+		<div class="user-agent-info">
+			<div class="inline-block-border-bottom">Viewing in <?php echo $info['agentInfo']; ?> on <?php echo $info['agentPlatform']; ?></div>
+			<div><?php echo $info['agentString']; ?></div>
+		</div>
