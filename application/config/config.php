@@ -282,10 +282,12 @@ $config['sess_time_to_update']	= 300;
 |
 | 'my_sess_device' 		= Index used to store (in session cookies) the user agent's device.
 | 'my_sess_is_handheld' = Index used to store (in session cookies) whether the sesion's user agent is handheld or not.
+| 'my_sess_platform' = Index used to store (in session cookies) the user agent's platform.
 |
 */
 $config['my_sess_device'] = 'device';
 $config['my_sess_is_handheld'] = 'is_handheld';
+$config['my_sess_platform'] = 'platform';
 
 /*
 |--------------------------------------------------------------------------

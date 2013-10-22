@@ -6,6 +6,10 @@
 
 class WURFL_Device_Helper {
 
+	const ANDROID = "Android";
+	const IOS = "iOS";
+	const WINDOWS_PHONE = "Windows Phone";
+	
 	const TABLET = "Tablet";
 	const MOBILE_PHONE = "Mobile Phone";
 	const MOBILE_DEVICE = "Mobile Device";
@@ -15,7 +19,27 @@ class WURFL_Device_Helper {
 	
 	public static function is_handheld($requestingDevice)
 	{
-		return $requestingDevice->getCapability('is_wireless_device') == 'true'; // according to WURFL docs, both laptop and desktop return false to this.
+		// according to WURFL docs (http://wurfl.sourceforge.net/help_doc.php), both laptop and desktop return false to this.
+		return $requestingDevice->getCapability('is_wireless_device') == 'true'; 
+	}
+
+	public static function get_device_platform($requestingDevice)
+	{
+		// from (http://wurfl.sourceforge.net/php_index.php)
+		/* if ($requestingDevice->getVirtualCapability('is_android') == 'true')
+		{
+			$platform = static::ANDROID;
+		}
+		else if ($requestingDevice->getVirtualCapability('is_ios') == 'true')
+		{
+			$platform = static::IOS;
+		}
+		else if ($requestingDevice->getVirtualCapability('is_windows_phone') == 'true')
+		{
+			$platform = static::WINDOWS_PHONE;
+		} */
+		
+		return $platform;
 	}
 
 	public static function identify_device($requestingDevice)

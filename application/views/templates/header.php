@@ -29,5 +29,5 @@
 		</div>
 	</header><!--end .header-->
 	<div class="user-agent-info">
-		<div class="inline-block-border-bottom">Viewing in <?php echo $this->session->userdata($this->config->item('my_sess_device')) ?></div>
+		<div class="inline-block-border-bottom">Viewing in <?php echo $this->session->userdata($this->config->item('my_sess_device')) ?> running <?php echo $this->session->userdata($this->config->item('my_sess_platform')) ?></div>
 	</div>

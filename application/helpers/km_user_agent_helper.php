@@ -6,6 +6,13 @@
 
 class KM_User_Agent_Helper {
 
+	public static function get_user_agent_platform()
+	{
+		$CI =& get_instance();
+		$CI->load->library('user_agent');
+		return $CI->agent->platform();
+	}
+	
 	public static function get_user_agent_info()
 	{
 		$CI =& get_instance();
@@ -29,7 +36,7 @@ class KM_User_Agent_Helper {
 		}
 
 		$info['agentInfo'] = $agent;
-		$info['agentPlatform'] = $CI->agent->platform();
+		$info['agent_platform'] = $CI->agent->platform();
 		$info['agentString'] = $CI->agent->agent_string();
 		
 		return $info;
