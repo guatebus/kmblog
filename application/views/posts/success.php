@@ -1,3 +1,3 @@
 <section>
-	<div class="content-main">Your blog post was created successfully.</div>
+	<h2>Your blog post was created successfully</h2>
 <section>

@@ -1,6 +1,8 @@
 <div class="content-main">
-	<?php echo form_open(site_url('login')); ?>
+	<?php echo form_open(site_url('login'), '', array('notice' => '')); ?>
 		<?php echo form_fieldset('User Login', array('class' => 'fieldset-auto-width')); ?>
+			
+			<?php echo form_error('notice'); ?>
 
 			<div class="textfield">
 				<?php echo form_input(array('name' => 'user_name', 'value' => 'admin')); ?>

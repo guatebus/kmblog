@@ -4,7 +4,7 @@
  * Wrapper to handle default encryption and decryption.
  */
 
-class EncryptorDecryptor {
+class Encryptor_Decryptor {
 
 	public static function encrypt($value)
 	{

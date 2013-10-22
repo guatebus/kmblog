@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 
-class BaseKitmakerError {
+class Base_Kitmaker_Error {
 
 	var $type;
 	var $code;

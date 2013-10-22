@@ -4,16 +4,16 @@ class Posts extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('posts_model');
+		$this->load->model('Posts_Model');
 		$this->load->helper('admin_validator');
 	}
 
 	public function index()
 	{
-		$data['posts'] = $this->posts_model->get_post();
+		$data['posts'] = $this->Posts_Model->get_post();
 		$data['title'] = 'Posts archive';
 		
-		parent::loadData($data);
+		parent::load_data($data);
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('posts/index', $data);
@@ -22,7 +22,7 @@ class Posts extends MY_Controller {
 
 	public function view($slug)
 	{
-		$data['post_item'] = $this->posts_model->get_post($slug);
+		$data['post_item'] = $this->Posts_Model->get_post($slug);
 		if (empty($data['post_item']))
 		{
 			show_404();
@@ -31,7 +31,7 @@ class Posts extends MY_Controller {
 		{
 			$data['title'] = $data['post_item']['title'];
 			
-			parent::loadData($data);
+			parent::load_data($data);
 
 			$this->load->view('templates/header', $data);
 			$this->load->view('posts/view', $data);
@@ -47,7 +47,7 @@ class Posts extends MY_Controller {
 
 		$data['title'] = 'Create a blog post';
 		
-		parent::loadData($data);
+		parent::load_data($data);
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('content', 'Content', 'required');
@@ -61,7 +61,7 @@ class Posts extends MY_Controller {
 		}
 		else
 		{
-			$this->posts_model->set_post();
+			$this->Posts_Model->set_post();
 			$this->load->view('templates/header', $data);
 			$this->load->view('posts/success');
 			$this->load->view('templates/footer');
@@ -70,7 +70,7 @@ class Posts extends MY_Controller {
 	
 	public function censor($slug)
 	{
-		$data['post_item'] = $this->posts_model->get_post($slug);
+		$data['post_item'] = $this->Posts_Model->get_post($slug);
 		if (empty($data['post_item']))
 		{
 			show_404();
@@ -79,7 +79,7 @@ class Posts extends MY_Controller {
 		{
 			if(Admin_Validator_Helper::isAdmin())
 			{
-				$this->posts_model->censor_post($slug);
+				$this->Posts_Model->censor_post($slug);
 				redirect(site_url('posts'));
 			}
 		}
