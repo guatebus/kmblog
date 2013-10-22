@@ -15,15 +15,15 @@
 			$this->load->helper('wurfl_device');
 			$isHandheld = WURFL_Device_Helper::is_handheld($device);
 			
-			if ($isHandheld)
-			{
+			// if ($isHandheld)
+			// {
 				// $platform = WURFL_Device_Helper::get_device_platform($device);
-			}
-			else
-			{
+			// }
+			// else
+			// {
 				$this->load->helper('km_user_agent');
 				$platform = KM_User_Agent_Helper::get_user_agent_platform();
-			}
+			// }
 			
 			$deviceInfo = array(
 				$this->config->item('my_sess_is_handheld') => $isHandheld,

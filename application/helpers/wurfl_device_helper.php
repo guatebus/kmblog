@@ -26,7 +26,7 @@ class WURFL_Device_Helper {
 	public static function get_device_platform($requestingDevice)
 	{
 		// from (http://wurfl.sourceforge.net/php_index.php)
-		/* if ($requestingDevice->getVirtualCapability('is_android') == 'true')
+		if ($requestingDevice->getVirtualCapability('is_android') == 'true')
 		{
 			$platform = static::ANDROID;
 		}
@@ -37,7 +37,7 @@ class WURFL_Device_Helper {
 		else if ($requestingDevice->getVirtualCapability('is_windows_phone') == 'true')
 		{
 			$platform = static::WINDOWS_PHONE;
-		} */
+		}
 		
 		return $platform;
 	}
