@@ -13,6 +13,8 @@ class Wurflinfo extends MY_Controller {
 		$data['ua'] = $this->kitmaker_wurfl->ua;
 		$data['wurflInfo'] = $this->kitmaker_wurfl->wurflInfo;
 		
+		$data['title'] = 'WURFL Info';
+		
 		parent::load_data($data);
 		
 		$this->load->view('templates/header', $data);

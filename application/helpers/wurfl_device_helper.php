@@ -25,7 +25,7 @@ class WURFL_Device_Helper {
 
 	public static function get_device_platform($requestingDevice)
 	{
-		// from (http://wurfl.sourceforge.net/php_index.php)
+		// getVirtualCapability() available until WURFL PHP v1.5 from (http://wurfl.sourceforge.net/php_index.php)
 		if ($requestingDevice->getVirtualCapability('is_android') == 'true')
 		{
 			$platform = static::ANDROID;
