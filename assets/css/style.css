@@ -283,6 +283,9 @@ header[role="banner"] .nav {
 	text-align: right;
 	padding: 1em 2em;
 }
+.bold-tag {
+	font-weight:bold;
+}
 /*Hide Search and Nav only if Advanced JS is present*/
 .queryselectorall .search, .queryselectorall [role="banner"] .nav {
 	display: none;

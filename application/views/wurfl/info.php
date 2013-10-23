@@ -3,17 +3,17 @@
 	</br><div class="content-main">
 		<div>
 			<ul>
-				<li>ID: <?php echo $requestingDevice->id; ?> </li>
-				<li>Model Name: <?php echo $requestingDevice->getCapability('model_name'); ?> </li>
-				<li>Brand Name: <?php echo $requestingDevice->getCapability('brand_name'); ?> </li>
-				</br><li>Is Handheld Device: <?php echo $this->session->userdata($this->config->item('my_sess_is_handheld')) ? 'True' : 'False' ?> </li>
-				</br><li>Resolution Width: <?php echo $requestingDevice->getCapability('resolution_width'); ?> </li>
-				<li>Resolution Height: <?php echo $requestingDevice->getCapability('resolution_height'); ?> </li>
-				</br><li>Marketing Name: <?php echo $requestingDevice->getCapability('marketing_name'); ?> </li>
-				<li>Preferred Markup: <?php echo $requestingDevice->getCapability('preferred_markup'); ?> </li>
+				<li><span class="bold-tag">ID</span>: <?php echo $requestingDevice->id; ?> </li>
+				<li><span class="bold-tag">Model Name</span>: <?php echo $requestingDevice->getCapability('model_name'); ?> </li>
+				<li><span class="bold-tag">Brand Name</span>: <?php echo $requestingDevice->getCapability('brand_name'); ?> </li>
+				</br><li><span class="bold-tag">Is Handheld Device</span>: <?php echo $this->session->userdata($this->config->item('my_sess_is_handheld')) ? 'True' : 'False' ?> </li>
+				</br><li><span class="bold-tag">Resolution Width</span>: <?php echo $requestingDevice->getCapability('resolution_width'); ?> </li>
+				<li><span class="bold-tag">Resolution Height</span>: <?php echo $requestingDevice->getCapability('resolution_height'); ?> </li>
+				</br><li><span class="bold-tag">Marketing Name</span>: <?php echo $requestingDevice->getCapability('marketing_name'); ?> </li>
+				<li><span class="bold-tag">Preferred Markup</span>: <?php echo $requestingDevice->getCapability('preferred_markup'); ?> </li>
 			</ul>
 		</div>
-		</br><div>WURFL Version: <?php echo $wurflInfo->version ?></div>
-		</br><div>User Agent: <?php echo $ua ?></div>
+		</br><div><span class="bold-tag">WURFL Version</span>: <?php echo $wurflInfo->version ?></div>
+		</br><div><span class="bold-tag">User Agent</span>: <?php echo $ua ?></div>
 	</div>
 </section>
