@@ -38,6 +38,10 @@
 |
 */
 
+// Datatables route
+$route['datatables'] = 'datatables';
+$route['datatables/loaddata'] = 'loaddatatablesdata';
+
 // WURFL route
 $route['wurfl'] = 'wurflinfo';
 

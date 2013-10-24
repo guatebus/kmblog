@@ -2,10 +2,19 @@
 <html>
 <head>
 	<title><?php echo $title ?> - Blog Web App by Alejandro Bustamante</title>
+	<!-- METADATA -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url().$cssLocation?>style.css" media="screen, handheld" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url().$css_location?>style.css" media="screen, handheld" />
 	<?php if(!$this->session->userdata($this->config->item('my_sess_is_handheld'))): ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url().$cssLocation?>enhanced.css" media="screen  and (min-width: 40.5em)" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url().$css_location?>enhanced.css" media="screen  and (min-width: 40.5em)" />
+	<?php endif; ?>
+	
+	<!-- JavaScript -->
+	<?php if($this->session->userdata($this->config->item('my_sess_is_handheld'))): ?>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+		<script type="text/javascript" src="<?php echo base_url().$js_location?>init.js"></script>
 	<?php endif; ?>
 </head>
 <body>
@@ -24,6 +33,7 @@
 						<li><a href="<?php echo site_url('logout')?>">Logout</a></li>
 					<?php endif; ?>
 					<li><a href="<?php echo site_url('wurfl')?>">WURFL</a></li>
+					<li><a href="<?php echo site_url('datatables')?>">Datatables</a></li>
 				</ul>
 			</nav>
 		</div>

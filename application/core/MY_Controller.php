@@ -35,8 +35,8 @@
 	
 	function load_data(&$data)
 	{
-		$data['cssLocation'] = $this->config->item('cssLocation');
-		$data['jsLocation'] = $this->config->item('jsLocation');
+		$data['css_location'] = $this->config->item('css_location');
+		$data['js_location'] = $this->config->item('js_location');
 	}
 	
 }

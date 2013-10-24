@@ -413,7 +413,7 @@ $config['proxy_ips'] = '';
 | The location of CSS stylesheets.
 |
 */
-$config['cssLocation'] = 'assets/css/';
+$config['css_location'] = 'assets/css/';
 
 /*
 |--------------------------------------------------------------------------
@@ -423,7 +423,7 @@ $config['cssLocation'] = 'assets/css/';
 | The location of JavaScript files.
 |
 */
-$config['jsLocation'] = 'assets/js/';
+$config['js_location'] = 'assets/js/';
 
 
 /* End of file config.php */
