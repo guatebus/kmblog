@@ -15,5 +15,7 @@
 		</div>
 		</br><div><span class="bold-tag">WURFL Version</span>: <?php echo $wurflInfo->version ?></div>
 		</br><div><span class="bold-tag">User Agent</span>: <?php echo $ua ?></div>
+		</br><div>The WURFL API is licensed under the <a href="http://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU Affero General Public License</a>.</div>
+		<div> As such, it's source files used in this website can be downloaded <a href="<?php echo base_url('files/WURFL-KMBlog.zip') ?>">here</a>.</div>
 	</div>
 </section>
