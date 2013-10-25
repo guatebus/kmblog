@@ -14,7 +14,6 @@
 	<!-- JavaScript -->
 	<?php if($this->session->userdata($this->config->item('my_sess_is_handheld'))): ?>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-		<script type="text/javascript" src="<?php echo base_url().$js_location?>init.js"></script>
 	<?php endif; ?>
 </head>
 <body>
