@@ -4,8 +4,8 @@
  */
 
 // Enable all error logging while in development
-ini_set('display_errors', 'on');
-error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
 
 $wurflDir = dirname(__FILE__) . '/../../../WURFL';
 $resourcesDir = dirname(__FILE__) . '/../../resources';
