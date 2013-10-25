@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://192.168.1.36/';
+$config['base_url']	= 'http://kitmaker.local';
 
 /*
 |--------------------------------------------------------------------------
