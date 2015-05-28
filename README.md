@@ -1,7 +1,7 @@
 kmblog
 ======
 
-Mobile-first designed blog web app written on CodeIgniter with WURFL and DataTables jQuery plugin
+Mobile-first blog webapp on CodeIgniter WURFL DataTables jQuery
 
 Installation instructions:
 
@@ -18,4 +18,4 @@ Installation instructions:
 	- username
 	- password
 
- - Website ready to use!
+ - Start server & enjoy!
